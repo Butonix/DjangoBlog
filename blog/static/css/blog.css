@@ -1,0 +1,120 @@
+body {
+  background-color: WhiteSmoke;
+  font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+.my-header-description {
+  font-size: 12pt;
+}
+
+.my-header-buttons {
+  margin-top: 20px;
+}
+
+.my-header-log {
+  float: right;
+  font-size: 12pt;
+}
+
+.img-circle {
+  float: left;
+
+  margin-right: 20pt;
+}
+
+.blog-title {
+  font-size: 24pt;
+}
+
+.btn-default {
+  float: right;
+}
+
+.likely {
+  margin-top: 10pt;
+}
+
+.col-md-8 {
+  padding-left: 0pt;
+}
+
+.page-header {
+    background-color: #33cc99;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #428bca;
+    font-size: 24pt;
+    text-decoration: none;
+}
+
+
+
+.pager {
+  text-align: left;
+}
+
+.pager li>a, .pager li>span {
+  border-radius: 5px;
+}
+
+.glyphicon-plus, .glyphicon-edit, .glyphicon-pencil, .glyphicon-remove, .glyphicon-lock {
+  font-size: 14pt;
+}
+
+.content {
+    /* margin-left: 20px; */
+}
+
+h1, h2, h3, h4{
+    font-weight: bold;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    /* color: #428bca; */
+    float: right;
+    font-size: 14pt;
+    margin-right: 30px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+  font-size: 20pt;
+  color: Black;
+}
+
+.comment {
+    margin: 20px 20px 20px 20px;
+}
+
+.blog-footer {
+  margin-top: 20px;
+}
+
+.likes {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 10px;
+}
+
+.like_count_blog {
+  font-size: 15px;
+  margin-bottom: 5px;
+}

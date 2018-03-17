@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %} {% block content %}
+<div class="post">
+  {% if user.is_authenticated %}
+  <a class="top-menu" href="{% url 'post_edit' pk=post.pk %}" data-toggle="tooltip" data-placement="right" title="Редактировать запись"><span class="glyphicon glyphicon-pencil"></span></a>
+  <a class="top-menu" href="{% url 'post_remove' pk=post.pk %}" data-toggle="tooltip" data-placement="right" title="Удалить запись"><span class="glyphicon glyphicon-remove"></span></a>
+  {% endif %}
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.text|linebreaksbr }}</p>
+
+
+  {% if post.published_date %}
+  <div class="date">
+    {{ post.published_date }}
+  </div>
+
+  <div class="likely">
+    <div class="vkontakte">Поделиться</div>
+    <div class="twitter">Твитнуть</div>
+    <div class="facebook">Поделиться</div>
+    <div class="telegram">Отправить</div>
+    <div class="odnoklassniki">Класснуть</div>
+  </div>
+
+  <div class="heart-particle-box">
+    <button class="post-likes glyphicon glyphicon-heart-empty btn btn-primary" id="heart-icon" data-post-id="{{ post.id }}"></button>
+    <div class="like_count_blog" id="heart-counter" style="display: inline">{{post.likes}}</div>
+  </div>
+
+  <div class="heart"></div>
+
+  {% else %}
+  <a class="btn btn-primary" href="{% url 'post_publish' pk=post.pk %}">Опубликовать</a>
+  {% endif %}
+
+</div>
+
+
+<hr>
+
+{% for comment in post.comments.all %}
+    <div class="comment">
+        <div class="date">{{ comment.created_date }}</div>
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment.text|linebreaks }}</p>
+    </div>
+{% empty %}
+    <p>Пока здесь нет комментариев. Будьте первым :)</p>
+{% endfor %}
+<a class="btn btn-primary" href="{% url 'add_comment_to_post' pk=post.pk %}">Прокомментировать</a>
+
+{% endblock %}
